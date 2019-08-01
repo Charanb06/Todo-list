@@ -72,7 +72,7 @@ export default class App extends React.Component {
             style={styles.textInput}
             onChangeText={noteText => this.setState({ noteText })}
             value={this.state.noteText}
-            placeholder=">> note"
+            placeholder="Add tasks!"
             placeholderTextColor="#CD5C5C"
           />
         </View>

@@ -8,7 +8,7 @@ import {
   TouchableOpacity
 } from 'react-native';
 import { Constants } from 'expo';
-import Note from '.app/components/Note';
+import Note from './components/Note';
 
 export default class App extends React.Component {
   state = {
@@ -26,6 +26,7 @@ export default class App extends React.Component {
       this.setState({ noteArray: this.state.noteArray });
       this.setState({ noteText: '' });
     }
+    // alert(this.state.noteText);
     console.log(this.state.noteArray);
     
   }
@@ -94,10 +95,10 @@ const styles = StyleSheet.create({
     fontSize: 42,
     fontWeight: 'bold',
     textAlign: 'center',
-    backgroundColor:"#E91E63"
+    backgroundColor:'#E91E63'
   },
   headerText: {
-    backgroundColor: '#FFC0CB',
+    //39backgroundColor: '#FFC0CB',
     fontSize: 42,
     color: 'white',
     fontWeight: 'bold',
@@ -105,34 +106,34 @@ const styles = StyleSheet.create({
   },
   scrollview: {
     flex: 1,
-    backgroundColor:"#ADDD2F",
+    backgroundColor:"#faebd7",
   },
   footer: {
     alignItems: 'center',
     left: 0,
     right: 0,
-    backgroundColor:"#ADFF2F"
+    backgroundColor:"#faebd7"
   },
   addButton: {
     width: 90,
     height: 90,
     borderRadius: 50,
-    borderColor: '#F08080',
+    borderColor: '#E91E63',
     alignItems: 'center',
     justifyContent: 'center',
     elevation: 8,
-    backgroundColor : "#F08080",
+    backgroundColor : "#E91E63",
     marginBottom: -45,
     zIndex: 10,
   },
   addButtonText: {
-    color: '#258',
+    color: '#fff',
     fontSize: 24,
     padding: 30,
   },
   textInput: {
     alignSelf: 'stretch',
-    color: '#fff',
+    color: 'red',
     padding: 20,
     paddingTop: 46,
     backgroundColor: '#252525',

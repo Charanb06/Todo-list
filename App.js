@@ -53,7 +53,7 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         <View style={styles.header}>
-          <Text style={styles.headerText}>NOTER</Text>
+          <Text style={styles.headerText}>Checklist</Text>
         </View>
         
         <ScrollView style={styles.scrollview}>
@@ -72,7 +72,7 @@ export default class App extends React.Component {
             style={styles.textInput}
             onChangeText={noteText => this.setState({ noteText })}
             value={this.state.noteText}
-            placeholder="Add tasks!"
+            placeholder=" Add tasks!"
             placeholderTextColor="#CD5C5C"
           />
         </View>

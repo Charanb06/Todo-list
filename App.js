@@ -24,7 +24,8 @@ export default class App extends React.Component {
     
   }
   deleteNote(key) {
-    return;
+    this.state.noteArray.splice(key,1);
+    this.setState({noteArray: this.state.noteArray})
   }
 
   render() {

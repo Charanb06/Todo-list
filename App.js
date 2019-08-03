@@ -1,12 +1,5 @@
 import * as React from 'react';
-import {
-  Text,
-  View,
-  StyleSheet,
-  TextInput,
-  ScrollView,
-  TouchableOpacity
-} from 'react-native';
+import {Text, View, StyleSheet, TextInput,ScrollView,TouchableOpacity} from 'react-native';
 import { Constants } from 'expo';
 import Note from './components/Note';
 
@@ -20,7 +13,8 @@ export default class App extends React.Component {
     if (this.state.noteArray.length >= 0) {
       var d = new Date();
       this.state.noteArray.push({
-        date: d.getFullYear() + '/' + (d.getMonth() + 1) + '/' + d.getDate(),
+        date: d.getFullYear() + '/' + (d.getMonth() + 1) + '/' + d.getDate() +
+        ' ' + d.getHours() + ":" + d.getMinutes(),
         note: this.state.noteText,
       });
       this.setState({ noteArray: this.state.noteArray });

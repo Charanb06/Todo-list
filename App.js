@@ -12,7 +12,9 @@ export default class App extends React.Component {
   addNote() {
     if (this.state.noteArray.length >= 0) {
       var d = new Date();
-      this.state.noteArray.push({
+      const addNote = firebase.database().ref().child("todo").push();
+
+      addNote.set({
         date: d.getFullYear() + '/' + (d.getMonth() + 1) + '/' + d.getDate() +
         ' ' + d.getHours() + ":" + d.getMinutes(),
         note: this.state.noteText,
@@ -20,7 +22,6 @@ export default class App extends React.Component {
       this.setState({ noteArray: this.state.noteArray });
       this.setState({ noteText: '' });
     }
-    // alert(this.state.noteText);
     console.log(this.state.noteArray);
     
   }

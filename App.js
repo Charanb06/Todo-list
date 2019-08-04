@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {Text, View, StyleSheet, TextInput,ScrollView,TouchableOpacity} from 'react-native';
 import { Constants } from 'expo';
-import Note from './components/Note';
+import Note from '.app/components/Note';
 
 export default class App extends React.Component {
   state = {
